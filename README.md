@@ -1,69 +1,99 @@
-# Welcome to your Lovable project
+# PopX Journey
 
-## Project info
+PopX Journey is a React-based web application that provides a seamless user experience through reusable components, efficient routing, and state management. This guide will help you set up, install dependencies, and run the application.
 
-**URL**: https://lovable.dev/projects/c8d6fd44-dbe5-49af-b4bc-eaaa907b1cea
+## Features
+- Modular component architecture
+- React Router for navigation
+- Context API for global state management
+- Custom hooks for reusable logic
+- API integrations for backend communication
 
-## How can I edit this code?
+## Prerequisites
+Before you begin, ensure you have the following installed:
 
-There are several ways of editing your application.
+- **Node.js** (v16 or later) – [Download](https://nodejs.org/)
+- **npm** (comes with Node.js) or **yarn** (alternative package manager)
 
-**Use Lovable**
+## Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c8d6fd44-dbe5-49af-b4bc-eaaa907b1cea) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. **Clone the Repository**
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/your-username/popx-journey.git
+cd popx-journey
 ```
 
-**Edit a file directly in GitHub**
+2. **Install Dependencies**
+```sh
+npm install
+# or
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Running the Application
 
-**Use GitHub Codespaces**
+### Development Mode
+To start the application in development mode, run:
+```sh
+npm run dev
+# or
+yarn dev
+```
+The application will be available at `http://localhost:3000/` (default port).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Production Mode
+To build and run the application in production mode:
+```sh
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+```
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with .
+```
+📦 popx-journey
+├── 📂 src
+│   ├── 📂 components    # Reusable UI components
+│   ├── 📂 pages         # Application pages
+│   ├── 📂 context       # Global state management (Auth, Theme, etc.)
+│   ├── 📂 hooks         # Custom hooks
+│   ├── 📂 lib           # Utility functions and helpers
+│   ├── 📂 services      # API integrations
+│   ├── 📜 App.tsx       # Main entry point
+├── 📜 package.json      # Project metadata and scripts
+├── 📜 README.md         # Project documentation
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Environment Variables
+To configure the application, create a `.env` file in the root directory and add:
+```env
+REACT_APP_API_URL=https://your-api-endpoint.com
+```
+Replace the URL with your actual API endpoint.
 
-## How can I deploy this project?
+## Additional Commands
 
-Simply open [Lovable](https://lovable.dev/projects/c8d6fd44-dbe5-49af-b4bc-eaaa907b1cea) and click on Share -> Publish.
+- **Lint the code**
+```sh
+npm run lint
+# or
+yarn lint
+```
+- **Run tests**
+```sh
+npm test
+# or
+yarn test
+```
+- **Format code using Prettier**
+```sh
+npm run format
+# or
+yarn format
+```
 
-## I want to use a custom domain - is that possible?
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+
